@@ -1104,6 +1104,7 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
+
 .portfolio-details {
   padding-top: 0;
 }
@@ -1164,6 +1165,43 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+
+.portfolio-details-links {
+  padding-right: 15px;
+}
+
+.portfolio-details-links a {
+  color: #6f6f6f;
+  padding-left: 6px;
+  display: inline-block;
+  line-height: 0px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.portfolio-details-links a:hover {
+  color: #34b7a7;
+}
+
+.header1-social-links {
+  padding-right: 15px;
+}
+
+.portfolio-details-links a {
+  color: #6f6f6f;
+  padding-left: 6px;
+  display: inline-block;
+  line-height: 0px;
+  transition: 0.3s;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;    
+    
+}
+
+.portfolio-details-links a:hover {
+  color: #34b7a7;
 }
 
 /*--------------------------------------------------------------
