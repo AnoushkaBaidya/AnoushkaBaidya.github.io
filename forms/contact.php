@@ -1,41 +1,42 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data and sanitize it
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $subject = htmlspecialchars(trim($_POST['subject']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+    // Check if all fields are filled
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        echo "error: All fields are required.";
+        exit;
+    }
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+    // Validate email address
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "error: Invalid email address.";
+        exit;
+    }
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+    // Email setup
+    $to = "abaidya@wpi.edu"; // Replace with your email address
+    $email_subject = "Contact Form: $subject";
+    $email_body = "You have received a new message from your website contact form.\n\n" .
+                  "Here are the details:\n" .
+                  "Name: $name\n" .
+                  "Email: $email\n\n" .
+                  "Message:\n$message\n";
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+    // Send the email
+    if (mail($to, $email_subject, $email_body, $headers)) {
+        echo "success";
+    } else {
+        echo "error: Failed to send your message. Please try again later.";
+    }
+} else {
+    echo "error: Invalid request method.";
+}
 ?>

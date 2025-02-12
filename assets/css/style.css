@@ -1372,3 +1372,41 @@ section {
 #footer .credits a {
   color: #34b7a7;
 }
+
+
+/*--------------------------------------------------------------
+# CARD
+--------------------------------------------------------------*/
+
+
+
+.project-card {
+    height: 100%; /* Ensures all cards are the same height */
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.project-card img {
+    object-fit: cover; /* Ensures the images scale properly */
+    height: 200px; /* Fixed height for images */
+    width: 100%; /* Makes sure images stretch to full card width */
+}
+
+.project-card .card-body {
+    flex-grow: 1; /* Ensures text and button align properly */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
