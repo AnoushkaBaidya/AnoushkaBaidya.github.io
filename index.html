@@ -132,6 +132,7 @@
             font-size: 1.5rem;
             margin: 0 10px;
             color: white;
+            margin-bottom: 30px;
         }
 
         /* ====== PROJECTS SECTION ====== */
@@ -147,6 +148,37 @@
         .project-card:hover {
             transform: translateY(-5px);
         }
+        
+
+.scroll-down {
+    position: absolute;
+    bottom: -100%; /* Adjust position relative to the bottom of the hero section */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3rem; /* Make the arrow larger */
+    animation: bounce 2s infinite;
+    text-decoration: none;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.scroll-down:hover {
+    color: #f8d210; /* Change color on hover */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+
     </style>
 </head>
 
@@ -169,59 +201,73 @@
     </div>
 </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Hello, I'm <span style="color: #f8d210;">Anoushka Baidya</span></h1>
-            <p>Robotics Software Engineer | Deep Learning | Computer Vision</p>
-            <a href="resume.pdf" class="btn btn-primary">Download Resume</a>
-            <a href="portfolio.html" class="btn btn-outline-light">View Projects</a>
-        </div>
+<!-- Hero Section -->
+<div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Hello, I'm <span style="color: #f8d210;">Anoushka Baidya</span></h1>
+        <p>Robotics Software Engineer | Deep Learning | Computer Vision</p>
+        <a href="resume.pdf" class="btn btn-primary">Download Resume</a>
+        <a href="portfolio.html" class="btn btn-outline-light">View Projects</a>
+
+        <!-- Down Arrow -->
+        <a href="#projects-section" class="scroll-down d-flex align-items-center justify-content-center">
+            <i class="bi bi-arrow-down-short"></i>
+        </a>
     </div>
+</div>
+
+<script>
+    document.querySelector('.scroll-down').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        const targetSection = document.querySelector('.projects'); // Target section
+        targetSection.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly
+    });
+</script>
 
 <!-- Featured Projects -->
-<section class="projects text-center">
+<section class="projects text-center" id="projects-section">
     <div class="container">
         <h2 class="mb-4">Featured Projects</h2>
         <div class="row">
             <div class="col-md-4">
-    <div class="card project-card">
-        <img src="assets/img/portfolio/autonomous.jpeg" class="card-img-top" alt="Autonomous Vehicles">
-        <div class="card-body">
-            <h5 class="card-title">Autonomous Vehicles</h5>
-            <p class="card-text">Developed autonomous vehicle systems for obstacle avoidance and navigation in complex environments.</p>
-            <a href="https://anoushkabaidya.github.io/portfolio.html" class="btn btn-outline-primary">Learn More</a>
-        </div>
-    </div>
+                <div class="card project-card">
+                    <img src="assets/img/portfolio/autonomous.jpeg" class="card-img-top" alt="Autonomous Vehicles">
+                    <div class="card-body">
+                        <h5 class="card-title">Autonomous Vehicles</h5>
+                        <p class="card-text">Developed autonomous vehicle systems for obstacle avoidance and navigation in complex environments.</p>
+                        <a href="https://anoushkabaidya.github.io/portfolio.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-    <div class="card project-card">
-        <img src="assets/img/portfolio/visualization.gif" class="card-img-top" alt="3D Object Tracking">
-        <div class="card-body">
-            <h5 class="card-title">3D Object Tracking</h5>
-            <p class="card-text">
-                Implemented algorithms for real-time object detection and tracking using dynamic 3D point clouds. The project focused on improving spatial accuracy and computational efficiency.
-            </p>
-            <a href="https://anoushkabaidya.github.io/portfolio.html" class="btn btn-outline-primary">Learn More</a>
+                <div class="card project-card">
+                    <img src="assets/img/portfolio/visualization.gif" class="card-img-top" alt="3D Object Tracking">
+                    <div class="card-body">
+                        <h5 class="card-title">3D Object Tracking</h5>
+                        <p class="card-text">
+                            Implemented algorithms for real-time object detection and tracking using dynamic 3D point clouds. The project focused on improving spatial accuracy and computational efficiency.
+                        </p>
+                        <a href="https://anoushkabaidya.github.io/portfolio.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="assets/img/portfolio/visual_fusion.gif" class="card-img-top" alt="Sensor Fusion">
+                    <div class="card-body">
+                        <h5 class="card-title">Sensor Fusion</h5>
+                        <p class="card-text">
+                            Designed multimodal fusion systems that combine LiDAR, depth, and color data to achieve enhanced environmental perception for robotics and autonomous systems.
+                        </p>
+                        <a href="https://anoushkabaidya.github.io/portfolio.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="col-md-4">
-    <div class="card project-card">
-        <img src="assets/img/portfolio/visual_fusion.gif" class="card-img-top" alt="Sensor Fusion">
-        <div class="card-body">
-            <h5 class="card-title">Sensor Fusion</h5>
-            <p class="card-text">
-                Designed multimodal fusion systems that combine LiDAR, depth, and color data to achieve enhanced environmental perception for robotics and autonomous systems.
-            </p>
-            <a href="https://anoushkabaidya.github.io/portfolio.html" class="btn btn-outline-primary">Learn More</a>
-        </div>
-    </div>
-</div>
-        </div>
-    </div>
-            </section>
+</section>
+
 
 
 

@@ -88,6 +88,34 @@
     .resume {
         padding-top: 100px;
     }
+      
+    .scroll-down {
+    position: absolute;
+    bottom: 20px; /* Adjust the position of the arrow */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    font-size: 2.5rem; /* Make the arrow bigger */
+    animation: bounce 2s infinite;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.scroll-down:hover {
+    color: #009688; /* Change color on hover */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
   </style>
 </head>
 
@@ -147,31 +175,35 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
+    <!-- About Section -->
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>About ME</h2>
+            <h2>About ME</h2>
         </div>
-
         <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/img/about1.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" style="margin: 0 auto;">
-              <h3><p style="text-align:left"><strong> Robotics Software Engineer</strong></p></h3>
-            <p class="fst-italic">
-          As a passionate and dedicated roboticist with a deep interest in the intersection of Computer Vision, Deep Learning, and Machine Learning, I'm commited to exploring and experimenting with new technologies. With a keen eye for detail and a thirst for knowledge, I am constantly seeking out new Challenges and Oppurtunities to grow and develop. Whether it's developing computer vision algorithms or building autonomous vehicle architecture, I'm always seeking out fresh challenges to satisfy my insatiable curiosity. With each challenge I tackle, I grow more knowledgeable and experienced, and my love for this field only continues to deepen. If you're looking for a roboticist who is as enthusiastic about pioneering technologies as you are, look no further! 
-          </div>
-            </p>
+            <div class="col-lg-4">
+                <img src="assets/img/about1.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" style="margin: 0 auto;">
+                <h3><p style="text-align:left"><strong> Robotics Software Engineer</strong></p></h3>
+                <p class="fst-italic">
+               As a passionate and dedicated roboticist with a deep interest in the intersection of Computer Vision, Deep Learning, and Machine Learning, I'm commited to exploring and experimenting with new technologies. With a keen eye for detail and a thirst for knowledge, I am constantly seeking out new Challenges and Oppurtunities to grow and develop. Whether it's developing computer vision algorithms or building autonomous vehicle architecture, I'm always seeking out fresh challenges to satisfy my insatiable curiosity. With each challenge I tackle, I grow more knowledgeable and experienced, and my love for this field only continues to deepen. If you're looking for a roboticist who is as enthusiastic about pioneering technologies as you are, look no further!
 
+                </p>
+            </div>
         </div>
 
-      </div>
-    </section><!-- End About Section -->
+        <!-- Scroll-Down Arrow -->
+        <a href="#skills-section" class="scroll-down d-flex align-items-center justify-content-center">
+            <i class="bi bi-arrow-down-short"></i>
+        </a>
+    </div>
+</section>
+<!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
-<section id="skills" class="skills">
+<section id="skills-section" class="skills">
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
