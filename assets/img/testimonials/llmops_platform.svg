@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020612"/>
+      <stop offset="48%" style="stop-color:#071224"/>
+      <stop offset="100%" style="stop-color:#030813"/>
+    </linearGradient>
+    <linearGradient id="barBefore" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff3f5780"/>
+      <stop offset="100%" style="stop-color:#ff3f5730"/>
+    </linearGradient>
+    <linearGradient id="barAfter" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2be39d"/>
+      <stop offset="100%" style="stop-color:#2be39d60"/>
+    </linearGradient>
+    <linearGradient id="barAfter2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#23b6ff"/>
+      <stop offset="100%" style="stop-color:#23b6ff60"/>
+    </linearGradient>
+    <linearGradient id="cardG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#07132780"/>
+      <stop offset="100%" style="stop-color:#030c1b90"/>
+    </linearGradient>
+    <linearGradient id="accentH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#23b6ff"/>
+      <stop offset="100%" style="stop-color:#7d35ff"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="15%" cy="15%" r="45%">
+      <stop offset="0%" style="stop-color:#1459ff30"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="85%" cy="85%" r="40%">
+      <stop offset="0%" style="stop-color:#7735ff28"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="480" fill="url(#bg)"/>
+  <rect width="900" height="480" fill="url(#g1)"/>
+  <rect width="900" height="480" fill="url(#g2)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="10" font-weight="800" letter-spacing="0.18em" fill="#00e8ff" font-family="Inter, sans-serif">LLMOPS INTENT CLASSIFICATION PLATFORM</text>
+  <text x="450" y="68" text-anchor="middle" font-size="20" font-weight="700" fill="#f4f7ff" font-family="'Space Grotesk', Inter, sans-serif" letter-spacing="-0.04em">QLoRA Fine-Tuning · Airflow · Kubernetes · Prometheus</text>
+
+  <!-- Left: Pipeline steps (vertical) -->
+  <rect x="28" y="95" width="200" height="358" rx="16" fill="url(#cardG)" stroke="#6e91d625" stroke-width="1"/>
+  <rect x="28" y="95" width="200" height="3" rx="2" fill="url(#accentH)" opacity="0.9"/>
+  <text x="128" y="120" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.14em" fill="#00e8ff">PIPELINE</text>
+
+  <!-- Steps -->
+  <g>
+    <!-- Step 1 -->
+    <rect x="44" y="132" width="168" height="48" rx="10" fill="rgba(35,182,255,0.1)" stroke="#23b6ff35" stroke-width="1"/>
+    <text x="60" y="152" font-size="9" font-weight="800" letter-spacing="0.1em" fill="#23b6ff">01  DATA</text>
+    <text x="60" y="168" font-size="9.5" font-weight="600" fill="#c8d6ef">77 intents · custom dataset</text>
+    <!-- connector -->
+    <line x1="128" y1="180" x2="128" y2="196" stroke="#6e91d640" stroke-width="1" stroke-dasharray="3,2"/>
+
+    <!-- Step 2 -->
+    <rect x="44" y="196" width="168" height="48" rx="10" fill="rgba(125,53,255,0.1)" stroke="#7d35ff35" stroke-width="1"/>
+    <text x="60" y="216" font-size="9" font-weight="800" letter-spacing="0.1em" fill="#b596ff">02  FINE-TUNE</text>
+    <text x="60" y="232" font-size="9.5" font-weight="600" fill="#c8d6ef">QLoRA · Hugging Face</text>
+    <line x1="128" y1="244" x2="128" y2="260" stroke="#6e91d640" stroke-width="1" stroke-dasharray="3,2"/>
+
+    <!-- Step 3 -->
+    <rect x="44" y="260" width="168" height="48" rx="10" fill="rgba(35,182,255,0.1)" stroke="#23b6ff35" stroke-width="1"/>
+    <text x="60" y="280" font-size="9" font-weight="800" letter-spacing="0.1em" fill="#23b6ff">03  TRACK</text>
+    <text x="60" y="296" font-size="9.5" font-weight="600" fill="#c8d6ef">MLflow · experiment logging</text>
+    <line x1="128" y1="308" x2="128" y2="324" stroke="#6e91d640" stroke-width="1" stroke-dasharray="3,2"/>
+
+    <!-- Step 4 -->
+    <rect x="44" y="324" width="168" height="48" rx="10" fill="rgba(125,53,255,0.1)" stroke="#7d35ff35" stroke-width="1"/>
+    <text x="60" y="344" font-size="9" font-weight="800" letter-spacing="0.1em" fill="#b596ff">04  ORCHESTRATE</text>
+    <text x="60" y="360" font-size="9.5" font-weight="600" fill="#c8d6ef">Airflow · scheduled retraining</text>
+    <line x1="128" y1="372" x2="128" y2="388" stroke="#6e91d640" stroke-width="1" stroke-dasharray="3,2"/>
+
+    <!-- Step 5 -->
+    <rect x="44" y="388" width="168" height="48" rx="10" fill="rgba(43,227,157,0.1)" stroke="#2be39d35" stroke-width="1"/>
+    <text x="60" y="408" font-size="9" font-weight="800" letter-spacing="0.1em" fill="#2be39d">05  DEPLOY + OBSERVE</text>
+    <text x="60" y="424" font-size="9.5" font-weight="600" fill="#c8d6ef">Kubernetes · Prometheus · Terraform</text>
+  </g>
+
+  <!-- Center: Before/After bar chart -->
+  <rect x="248" y="95" width="330" height="358" rx="16" fill="url(#cardG)" stroke="#6e91d625" stroke-width="1"/>
+  <rect x="248" y="95" width="330" height="3" rx="2" fill="url(#accentH)" opacity="0.9"/>
+  <text x="413" y="120" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.14em" fill="#00e8ff">BEFORE vs AFTER FINE-TUNING</text>
+
+  <!-- Chart area -->
+  <!-- Baseline grid -->
+  <line x1="300" y1="370" x2="548" y2="370" stroke="#6e91d618" stroke-width="1"/>
+  <line x1="300" y1="310" x2="548" y2="310" stroke="#6e91d618" stroke-width="1"/>
+  <line x1="300" y1="250" x2="548" y2="250" stroke="#6e91d618" stroke-width="1"/>
+  <line x1="300" y1="190" x2="548" y2="190" stroke="#6e91d618" stroke-width="1"/>
+  <line x1="300" y1="145" x2="548" y2="145" stroke="#6e91d618" stroke-width="1"/>
+  <text x="292" y="374" text-anchor="end" font-size="8" fill="#6e91d6">0%</text>
+  <text x="292" y="314" text-anchor="end" font-size="8" fill="#6e91d6">25%</text>
+  <text x="292" y="254" text-anchor="end" font-size="8" fill="#6e91d6">50%</text>
+  <text x="292" y="194" text-anchor="end" font-size="8" fill="#6e91d6">75%</text>
+  <text x="292" y="149" text-anchor="end" font-size="8" fill="#6e91d6">100%</text>
+
+  <!-- Metric 1: Intent Accuracy  Before=44.8% → After=76.6% -->
+  <!-- Before bar: 44.8% of (370-145)=225 → 100.8px tall. Top = 370-100.8 = 269.2 -->
+  <rect x="316" y="269" width="38" height="101" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <text x="335" y="261" text-anchor="middle" font-size="9" font-weight="700" fill="#ff3f57">44.8%</text>
+  <!-- After bar: 76.6% → 172.4px. Top = 370-172.4 = 197.6 -->
+  <rect x="362" y="198" width="38" height="172" rx="4" fill="url(#barAfter)" opacity="0.9"/>
+  <text x="381" y="190" text-anchor="middle" font-size="9" font-weight="700" fill="#2be39d">76.6%</text>
+  <text x="358" y="393" text-anchor="middle" font-size="8" fill="#97a9ca">Intent</text>
+  <text x="358" y="403" text-anchor="middle" font-size="8" fill="#97a9ca">Accuracy</text>
+
+  <!-- Metric 2: Schema Compliance  Before=84.4% → After=100% -->
+  <!-- Before: 84.4% → 190px. Top = 370-190 = 180 -->
+  <rect x="436" y="180" width="38" height="190" rx="4" fill="url(#barBefore)" opacity="0.85"/>
+  <text x="455" y="172" text-anchor="middle" font-size="9" font-weight="700" fill="#ff3f57">84.4%</text>
+  <!-- After: 100% → 225px. Top = 145 -->
+  <rect x="482" y="145" width="38" height="225" rx="4" fill="url(#barAfter2)" opacity="0.9"/>
+  <text x="501" y="137" text-anchor="middle" font-size="9" font-weight="700" fill="#23b6ff">100%</text>
+  <text x="478" y="393" text-anchor="middle" font-size="8" fill="#97a9ca">Schema</text>
+  <text x="478" y="403" text-anchor="middle" font-size="8" fill="#97a9ca">Compliance</text>
+
+  <!-- Legend -->
+  <rect x="300" y="420" width="12" height="12" rx="3" fill="#ff3f5780"/>
+  <text x="316" y="430" font-size="9" fill="#97a9ca">Before fine-tuning</text>
+  <rect x="420" y="420" width="12" height="12" rx="3" fill="#2be39d90"/>
+  <text x="436" y="430" font-size="9" fill="#97a9ca">After QLoRA</text>
+
+  <!-- Right: Key metrics cards -->
+  <rect x="598" y="95" width="274" height="358" rx="16" fill="url(#cardG)" stroke="#6e91d625" stroke-width="1"/>
+  <rect x="598" y="95" width="274" height="3" rx="2" fill="url(#accentH)" opacity="0.9"/>
+  <text x="735" y="120" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.14em" fill="#00e8ff">KEY RESULTS</text>
+
+  <!-- Metric cards -->
+  <!-- Card 1 -->
+  <rect x="614" y="132" width="242" height="64" rx="12" fill="rgba(43,227,157,0.08)" stroke="#2be39d30" stroke-width="1"/>
+  <text x="630" y="154" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#2be39d">INTENT ACCURACY LIFT</text>
+  <text x="630" y="182" font-family="'Space Grotesk', Inter, sans-serif" font-size="26" font-weight="700" fill="#2be39d">+31.8 pts</text>
+  <text x="820" y="182" text-anchor="end" font-size="10" fill="#97a9ca">44.8 → 76.6%</text>
+
+  <!-- Card 2 -->
+  <rect x="614" y="208" width="242" height="64" rx="12" fill="rgba(35,182,255,0.08)" stroke="#23b6ff30" stroke-width="1"/>
+  <text x="630" y="230" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#23b6ff">SCHEMA COMPLIANCE</text>
+  <text x="630" y="258" font-family="'Space Grotesk', Inter, sans-serif" font-size="26" font-weight="700" fill="#23b6ff">100%</text>
+  <text x="820" y="258" text-anchor="end" font-size="10" fill="#97a9ca">84.4 → 100%</text>
+
+  <!-- Card 3 -->
+  <rect x="614" y="284" width="242" height="64" rx="12" fill="rgba(125,53,255,0.1)" stroke="#7d35ff30" stroke-width="1"/>
+  <text x="630" y="306" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#b596ff">INTENTS COVERED</text>
+  <text x="630" y="334" font-family="'Space Grotesk', Inter, sans-serif" font-size="26" font-weight="700" fill="#b596ff">77</text>
+  <text x="820" y="334" text-anchor="end" font-size="10" fill="#97a9ca">across domains</text>
+
+  <!-- Card 4 stack -->
+  <rect x="614" y="360" width="115" height="64" rx="12" fill="rgba(0,232,255,0.07)" stroke="#00e8ff28" stroke-width="1"/>
+  <text x="625" y="382" font-size="9" font-weight="800" letter-spacing="0.1em" fill="#00e8ff">ORCHESTRATION</text>
+  <text x="625" y="410" font-size="11" font-weight="700" fill="#f4f7ff">Airflow DAGs</text>
+
+  <rect x="741" y="360" width="115" height="64" rx="12" fill="rgba(0,232,255,0.07)" stroke="#00e8ff28" stroke-width="1"/>
+  <text x="752" y="382" font-size="9" font-weight="800" letter-spacing="0.1em" fill="#00e8ff">INFRA AS CODE</text>
+  <text x="752" y="410" font-size="11" font-weight="700" fill="#f4f7ff">Terraform</text>
+</svg>

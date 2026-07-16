@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020612"/>
+      <stop offset="48%" style="stop-color:#071224"/>
+      <stop offset="100%" style="stop-color:#030813"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#07132780"/>
+      <stop offset="100%" style="stop-color:#030c1b90"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#23b6ff"/>
+      <stop offset="100%" style="stop-color:#7d35ff"/>
+    </linearGradient>
+    <linearGradient id="metricGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d3b3840"/>
+      <stop offset="100%" style="stop-color:#03081380"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Subtle radial glows -->
+    <radialGradient id="glow1" cx="20%" cy="20%" r="40%">
+      <stop offset="0%" style="stop-color:#1459ff38"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="80%" r="40%">
+      <stop offset="0%" style="stop-color:#7735ff30"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="480" fill="url(#bg)"/>
+  <rect width="900" height="480" fill="url(#glow1)"/>
+  <rect width="900" height="480" fill="url(#glow2)"/>
+
+  <!-- Title area -->
+  <text x="450" y="42" text-anchor="middle" font-family="'Space Grotesk', Inter, sans-serif" font-size="11" font-weight="800" letter-spacing="0.18em" fill="#00e8ff">SURFACE DEFECT INSPECTION PLATFORM</text>
+  <text x="450" y="68" text-anchor="middle" font-size="22" font-weight="700" fill="#f4f7ff" font-family="'Space Grotesk', Inter, sans-serif" letter-spacing="-0.04em">PyTorch · ONNX INT8 · WinCLIP VLM · MLflow</text>
+
+  <!-- Pipeline nodes — 5 boxes in a row -->
+  <!-- Node helper: rx=14, height=72, width=130 -->
+
+  <!-- Arrow lines first (so they're behind boxes) -->
+  <!-- Arrow 1→2 -->
+  <line x1="188" y1="190" x2="218" y2="190" stroke="url(#accentBlue)" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+  <polygon points="218,186 226,190 218,194" fill="#23b6ff" opacity="0.8"/>
+  <!-- Arrow 2→3 -->
+  <line x1="358" y1="190" x2="388" y2="190" stroke="url(#accentBlue)" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+  <polygon points="388,186 396,190 388,194" fill="#7d35ff" opacity="0.8"/>
+  <!-- Arrow 3→4 -->
+  <line x1="528" y1="190" x2="558" y2="190" stroke="url(#accentBlue)" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+  <polygon points="558,186 566,190 558,194" fill="#23b6ff" opacity="0.8"/>
+  <!-- Arrow 4→5 -->
+  <line x1="698" y1="190" x2="728" y2="190" stroke="url(#accentBlue)" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+  <polygon points="728,186 736,190 728,194" fill="#7d35ff" opacity="0.8"/>
+
+  <!-- Node 1: Image Input -->
+  <rect x="28" y="152" width="160" height="76" rx="14" fill="url(#cardGrad)" stroke="#6e91d640" stroke-width="1"/>
+  <rect x="28" y="152" width="160" height="3" rx="2" fill="#23b6ff" opacity="0.9"/>
+  <text x="108" y="182" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#00e8ff">INPUT</text>
+  <text x="108" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#f4f7ff">Camera Feed</text>
+  <text x="108" y="216" text-anchor="middle" font-size="9" fill="#97a9ca">Industrial inspection images</text>
+
+  <!-- Node 2: 5-Model Ensemble -->
+  <rect x="228" y="144" width="130" height="92" rx="14" fill="url(#cardGrad)" stroke="#7d35ff50" stroke-width="1.5"/>
+  <rect x="228" y="144" width="130" height="3" rx="2" fill="#7d35ff" opacity="0.9"/>
+  <text x="293" y="172" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#b596ff">ENSEMBLE</text>
+  <text x="293" y="190" text-anchor="middle" font-size="12" font-weight="700" fill="#f4f7ff">5 Models</text>
+  <text x="293" y="206" text-anchor="middle" font-size="9" fill="#97a9ca">WinCLIP VLM + 4 CNN</text>
+  <text x="293" y="222" text-anchor="middle" font-size="10" font-weight="700" fill="#2be39d">0.9853 AUROC</text>
+
+  <!-- Node 3: ONNX Runtime -->
+  <rect x="398" y="152" width="130" height="76" rx="14" fill="url(#cardGrad)" stroke="#23b6ff40" stroke-width="1"/>
+  <rect x="398" y="152" width="130" height="3" rx="2" fill="#23b6ff" opacity="0.9"/>
+  <text x="463" y="182" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#00e8ff">INFERENCE</text>
+  <text x="463" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#f4f7ff">ONNX INT8</text>
+  <text x="463" y="216" text-anchor="middle" font-size="9" fill="#2be39d">59% latency reduction</text>
+
+  <!-- Node 4: MLflow + KS Drift -->
+  <rect x="568" y="144" width="130" height="92" rx="14" fill="url(#cardGrad)" stroke="#7d35ff50" stroke-width="1.5"/>
+  <rect x="568" y="144" width="130" height="3" rx="2" fill="#7d35ff" opacity="0.9"/>
+  <text x="633" y="172" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#b596ff">MONITORING</text>
+  <text x="633" y="190" text-anchor="middle" font-size="12" font-weight="700" fill="#f4f7ff">MLflow + KS Drift</text>
+  <text x="633" y="206" text-anchor="middle" font-size="9" fill="#97a9ca">Experiment tracking</text>
+  <text x="633" y="222" text-anchor="middle" font-size="9" fill="#97a9ca">Statistical drift detection</text>
+
+  <!-- Node 5: Output -->
+  <rect x="738" y="152" width="134" height="76" rx="14" fill="url(#cardGrad)" stroke="#2be39d40" stroke-width="1"/>
+  <rect x="738" y="152" width="134" height="3" rx="2" fill="#2be39d" opacity="0.9"/>
+  <text x="805" y="182" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#2be39d">RESULT</text>
+  <text x="805" y="200" text-anchor="middle" font-size="13" font-weight="700" fill="#f4f7ff">Defect Alert</text>
+  <text x="805" y="216" text-anchor="middle" font-size="9" fill="#97a9ca">Localization + confidence</text>
+
+  <!-- Stack labels below nodes -->
+  <text x="108" y="248" text-anchor="middle" font-size="8" fill="#6e91d6" letter-spacing="0.06em">Ray · FastAPI</text>
+  <text x="293" y="256" text-anchor="middle" font-size="8" fill="#6e91d6" letter-spacing="0.06em">PyTorch · Benchmarked 5 models</text>
+  <text x="463" y="248" text-anchor="middle" font-size="8" fill="#6e91d6" letter-spacing="0.06em">Quantization · Execution tuning</text>
+  <text x="633" y="256" text-anchor="middle" font-size="8" fill="#6e91d6" letter-spacing="0.06em">AWS EC2 · S3 · 400K req/day</text>
+  <text x="805" y="248" text-anchor="middle" font-size="8" fill="#6e91d6" letter-spacing="0.06em">Kubernetes · CI/CD</text>
+
+  <!-- Metrics strip at bottom -->
+  <rect x="28" y="298" width="844" height="68" rx="16" fill="url(#metricGrad)" stroke="#6e91d620" stroke-width="1"/>
+
+  <!-- Metric 1 -->
+  <text x="120" y="325" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#97a9ca">AUROC</text>
+  <text x="120" y="352" text-anchor="middle" font-family="'Space Grotesk', Inter, sans-serif" font-size="24" font-weight="700" fill="#2be39d">0.9853</text>
+
+  <line x1="240" y1="308" x2="240" y2="358" stroke="#6e91d625" stroke-width="1"/>
+
+  <!-- Metric 2 -->
+  <text x="340" y="325" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#97a9ca">LATENCY REDUCTION</text>
+  <text x="340" y="352" text-anchor="middle" font-family="'Space Grotesk', Inter, sans-serif" font-size="24" font-weight="700" fill="#23b6ff">−59%</text>
+
+  <line x1="460" y1="308" x2="460" y2="358" stroke="#6e91d625" stroke-width="1"/>
+
+  <!-- Metric 3 -->
+  <text x="560" y="325" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#97a9ca">THROUGHPUT</text>
+  <text x="560" y="352" text-anchor="middle" font-family="'Space Grotesk', Inter, sans-serif" font-size="24" font-weight="700" fill="#b596ff">400K+</text>
+  <text x="560" y="365" text-anchor="middle" font-size="9" fill="#97a9ca">requests/day</text>
+
+  <line x1="680" y1="308" x2="680" y2="358" stroke="#6e91d625" stroke-width="1"/>
+
+  <!-- Metric 4 -->
+  <text x="780" y="325" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="0.12em" fill="#97a9ca">ESCAPED DEFECTS</text>
+  <text x="780" y="352" text-anchor="middle" font-family="'Space Grotesk', Inter, sans-serif" font-size="24" font-weight="700" fill="#00e8ff">−85%</text>
+
+  <!-- Stack badges -->
+  <rect x="28" y="386" width="844" height="68" rx="16" fill="rgba(6,18,38,0.5)" stroke="#6e91d618" stroke-width="1"/>
+  <text x="450" y="406" text-anchor="middle" font-size="8" font-weight="800" letter-spacing="0.14em" fill="#6e91d6">TECH STACK</text>
+
+  <!-- Badge pills -->
+  <rect x="50" y="414" width="66" height="22" rx="11" fill="rgba(35,182,255,0.12)" stroke="#23b6ff40" stroke-width="1"/>
+  <text x="83" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#23b6ff">PyTorch</text>
+
+  <rect x="126" y="414" width="52" height="22" rx="11" fill="rgba(35,182,255,0.12)" stroke="#23b6ff40" stroke-width="1"/>
+  <text x="152" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#23b6ff">ONNX</text>
+
+  <rect x="188" y="414" width="68" height="22" rx="11" fill="rgba(125,53,255,0.14)" stroke="#7d35ff40" stroke-width="1"/>
+  <text x="222" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#b596ff">WinCLIP</text>
+
+  <rect x="266" y="414" width="48" height="22" rx="11" fill="rgba(125,53,255,0.14)" stroke="#7d35ff40" stroke-width="1"/>
+  <text x="290" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#b596ff">Ray</text>
+
+  <rect x="324" y="414" width="58" height="22" rx="11" fill="rgba(35,182,255,0.12)" stroke="#23b6ff40" stroke-width="1"/>
+  <text x="353" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#23b6ff">FastAPI</text>
+
+  <rect x="392" y="414" width="62" height="22" rx="11" fill="rgba(43,227,157,0.12)" stroke="#2be39d40" stroke-width="1"/>
+  <text x="423" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#2be39d">MLflow</text>
+
+  <rect x="464" y="414" width="92" height="22" rx="11" fill="rgba(43,227,157,0.12)" stroke="#2be39d40" stroke-width="1"/>
+  <text x="510" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#2be39d">Kubernetes</text>
+
+  <rect x="566" y="414" width="54" height="22" rx="11" fill="rgba(125,53,255,0.14)" stroke="#7d35ff40" stroke-width="1"/>
+  <text x="593" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#b596ff">AWS S3</text>
+
+  <rect x="630" y="414" width="44" height="22" rx="11" fill="rgba(35,182,255,0.12)" stroke="#23b6ff40" stroke-width="1"/>
+  <text x="652" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#23b6ff">EC2</text>
+
+  <rect x="684" y="414" width="52" height="22" rx="11" fill="rgba(43,227,157,0.12)" stroke="#2be39d40" stroke-width="1"/>
+  <text x="710" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#2be39d">CI/CD</text>
+
+  <rect x="746" y="414" width="56" height="22" rx="11" fill="rgba(125,53,255,0.14)" stroke="#7d35ff40" stroke-width="1"/>
+  <text x="774" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#b596ff">Terraform</text>
+
+  <rect x="812" y="414" width="48" height="22" rx="11" fill="rgba(43,227,157,0.12)" stroke="#2be39d40" stroke-width="1"/>
+  <text x="836" y="429" text-anchor="middle" font-size="9" font-weight="700" fill="#2be39d">DVC</text>
+</svg>

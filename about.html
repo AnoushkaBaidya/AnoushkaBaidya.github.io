@@ -10,6 +10,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
+  
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -116,8 +117,86 @@
         transform: translateX(-50%) translateY(-5px);
     }
 }
+
+  /* ====== SKILL CHIPS ====== */
+    .skill-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    .chip {
+        display: inline-block;
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        border: 1.5px solid;
+        background: transparent;
+        letter-spacing: 0.01em;
+    }
+
+    .chip-blue   { color: #23b6ff; border-color: rgba(35, 182, 255, 0.45); }
+    .chip-purple { color: #b596ff; border-color: rgba(181, 150, 255, 0.45); }
+    .chip-green  { color: #2be39d; border-color: rgba(43, 227, 157, 0.45); }
+    .chip-teal   { color: #00e8ff; border-color: rgba(0, 232, 255, 0.45); }
+
+    /* ====== CONTACT ICONS — slightly more polished ====== */
+    .contact-icon-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 20px 12px;
+        border-radius: 14px;
+        transition: background 0.25s;
+    }
+
+    .contact-icon-wrap:hover {
+        background: rgba(0, 150, 136, 0.07);
+    }
+
+    .contact-icon-wrap a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #f0f8f7;
+        border: 1.5px solid rgba(0, 150, 136, 0.25);
+        color: #009688;
+        font-size: 22px;
+        transition: 0.25s;
+        text-decoration: none;
+    }
+
+    .contact-icon-wrap a:hover {
+        background: #009688;
+        color: #fff;
+        border-color: #009688;
+        box-shadow: 0 6px 18px rgba(0, 150, 136, 0.25);
+        transform: translateY(-2px);
+    }
+
+    .contact-icon-wrap strong {
+        font-size: 13px;
+        color: #444;
+        font-weight: 600;
+    }
+
+    /* ====== TESTIMONIAL IMAGE — bigger with rounded corners ====== */
+    .testimonial-img {
+        width: 390px !important;
+        height: 240px !important;
+        border-radius: 13px !important;
+        object-fit: cover !important;
+        object-position: top !important;
+    }
   </style>
 </head>
+
 
 <body>
 
@@ -186,120 +265,114 @@
                 <img src="assets/img/about1.jpeg" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0 content" style="margin: 0 auto;">
-                <h3><p style="text-align:left"><strong> Robotics Software Engineer</strong></p></h3>
+                <h3><p style="text-align:left"><strong> Machine Learning Engineer </strong></p></h3>
                 <p class="fst-italic">
-               As a passionate and dedicated roboticist with a deep interest in the intersection of Computer Vision, Deep Learning, and Machine Learning, I'm commited to exploring and experimenting with new technologies. With a keen eye for detail and a thirst for knowledge, I am constantly seeking out new Challenges and Oppurtunities to grow and develop. Whether it's developing computer vision algorithms or building autonomous vehicle architecture, I'm always seeking out fresh challenges to satisfy my insatiable curiosity. With each challenge I tackle, I grow more knowledgeable and experienced, and my love for this field only continues to deepen. If you're looking for a roboticist who is as enthusiastic about pioneering technologies as you are, look no further!
-
-                </p>
+              With a background in robotics and a Master's in Robotics Engineering from WPI
+              (with a minor in Deep Learning), I bring something most ML engineers don't:
+              I understand the physical systems my models are deployed into.
+            </p>
+            <p class="fst-italic">
+              My work sits at the intersection of Production ML, Computer Vision, and LLMOps —
+              and I care deeply about what happens after the model is trained: deployment,
+              observability, and making sure it doesn't break in the wild. I've built systems
+              for real-time inference, large-scale defect detection, and retrieval-augmented
+              pipelines that hold up under production load.
+            </p>
+            <p class="fst-italic">
+              I've worked across manufacturing, robotics, and autonomous systems — which means
+              I know what it takes to move a model from notebook to production and keep it there.
+              I'm drawn to problems where the stakes are real, the constraints are hard, and
+              production is the standard — not the exception.
+            </p>
             </div>
         </div>
 
-        <!-- Scroll-Down Arrow -->
+        
+    </div>
+
+<!-- End About Section -->
+
+<!-- Scroll-Down Arrow -->
         <a href="#skills-section" class="scroll-down d-flex align-items-center justify-content-center">
             <i class="bi bi-arrow-down-short"></i>
         </a>
-    </div>
 </section>
-<!-- End About Section -->
-
-    <!-- ======= Skills Section ======= -->
-<section id="skills-section" class="skills">
-  <div class="container" data-aos="fade-up">
-
-    <div class="section-title">
-      <h2>Education</h2>
-      <p style="text-align:left"><strong>Worcester Polytechnic Institute <span style="float:right;">
-    Worcester, USA
-</span></strong></p>
-        <p style="text-align:left"><i>Masters of Science in Robotics Engineering</i> <span style="float:right;">
-    2022 - 2024
-</span></p>    
-        <p style="text-align:left"> GPA : 4.0/4.0 </p>  
-        <p style="text-align:left"><strong>Manipal Institute of Technology <span style="float:right;">
-    Manipal, India
-</span></strong></p>
-        <p style="text-align:left"><i>Bachelor of Technology in Mechatronics Engineering</i> <span style="float:right;">
-    2016 - 2020
-</span></p>
-        <p style="text-align:left"> CGPA : 8.68/10 </p>         
-    </div>
-
-          
-    
-
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
+    <!-- ======= Education Section ======= -->
+    <section id="skills-section" class="skills">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
-          <h2>Contact</h2>
-          <p> Connect with me!</p>
+          <h2>Education</h2>
+          <p style="text-align:left"><strong>Worcester Polytechnic Institute <span style="float:right;">Worcester, USA</span></strong></p>
+          <p style="text-align:left"><i>Master of Science in Robotics Engineering · Minor in Deep Learning</i> <span style="float:right;">2022 – 2024</span></p>
+          <p style="text-align:left">GPA: 4.0 / 4.0</p>
+          <p style="text-align:left; margin-top: 10px;"><strong>Manipal Institute of Technology <span style="float:right;">Manipal, India</span></strong></p>
+          <p style="text-align:left"><i>Bachelor of Technology in Mechatronics Engineering</i> <span style="float:right;">2016 – 2020</span></p>
+          <p style="text-align:left">CGPA: 8.68 / 10</p>
         </div>
+      
 
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-          <div class="header1-social-links">
-        <p  style="text-align:center">      
-        <a href="mailto:abaidya@wpi.edu"  class="linkedin"><i class="bi bi-envelope"></i></a> 
-      </div> 
-            <p style="text-align:center"><strong>Email</strong></p>
+                <!-- ======= Contact Section ======= -->
+        <section id="facts" class="facts">
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Contact</h2>
+              <p>Let's connect!</p>
+            </div>
+            <div class="row counters">
+              <div class="col-lg-3 col-6 text-center">
+                <div class="contact-icon-wrap">
+                  <a href="mailto:abaidya@wpi.edu" title="Email"><i class="bi bi-envelope"></i></a>
+                  <strong>Email</strong>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 text-center">
+                <div class="contact-icon-wrap">
+                  <a href="https://github.com/AnoushkaBaidya" title="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+                  <strong>GitHub</strong>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 text-center">
+                <div class="contact-icon-wrap">
+                  <a href="https://www.linkedin.com/in/anoushka-baidya" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+                  <strong>LinkedIn</strong>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 text-center">
+                <div class="contact-icon-wrap">
+                  <a href="tel:+15087626033" title="Phone"><i class="bi bi-phone"></i></a>
+                  <strong>Phone</strong>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <div class="header1-social-links">
-        <p  style="text-align:center">        
-        <a href="https://github.com/AnoushkaBaidya"  class="linkedin"><i class="bi bi-github"></i></a> 
-      </div> 
-            <p style="text-align:center"><strong>Github</strong></p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <div class="header1-social-links">
-        <p  style="text-align:center">        
-        <a href="https://www.linkedin.com/in/anoushka-baidya"  class="linkedin"><i class="bi bi-linkedin"></i></a> 
-      </div> 
-            <p style="text-align:center"><strong>Linkedin</strong></p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-              
-            <div class="header1-social-links">
-        <p  style="text-align:center">      
-        <a href=" "  class="linkedin"><i class="bi bi-phone"></i></a>    
-            <p style="text-align:center"><strong>Phone</strong></p>
-          </div>
-        </div>
+        </section>
 
       </div>
     </section>
-          </section>    
-        <!-- End Facts Section -->
 
-    <!-- ======= Testimonials Section ======= -->
+    <!-- ======= Highlights Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>Highlights</h2>
-          <p> I've got some exciting projects you might like!</p>
+          <p>A few projects I'm proud of — visit the Projects page for the full story.</p>
         </div>
-
+          
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpeg" class="testimonial-img" alt="">
-                <h3>Vision Based Grasping</h3>
-                <h4>Computer Vision</h4>
+                <img src="assets/img/portfolio/rag.gif" class="testimonial-img" alt="RAG Document Intelligence">
+                <h3>RAG Document Intelligence</h3>
+                <h4>LLMOps · Retrieval Systems</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Imagine a robot that can see and grasp objects in 3D space. That's exactly what I've been working on - developing cutting-edge algorithms to segment, synthesize, and optimize grasping based on the environment's point cloud data.
+                  What if your documents could answer back? I built a production RAG pipeline using hybrid retrieval and FAISS vector search that improved Recall@1 by 33.8% and MRR by 23.2% — all at 93ms p95 latency. The kind of retrieval that actually holds up when the stakes are real.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -314,31 +387,49 @@
               </div>
             </div><!-- End testimonial item -->
 
+            <!-- Slide 2: Speech Translation -->
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/robot.webp" class="testimonial-img" alt="">
-                <h3>Visual Servoing</h3>
-                <h4>Computer Vision</h4>
+                <img src="assets/img/testimonials/speech_translation_preview.gif" class="testimonial-img" alt="Real-Time Speech Translation">
+                <h3>Real-Time Speech Translation</h3>
+                <h4>Production ML · Real-Time Inference</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Using visual servoing and image Jacobians to develop sophisticated algorithms that can track and manipulate objects with ease. Want to learn more about this work? Visit my projects section for more details. 
+                  Language barriers disappear at 115ms. I deployed a live bidirectional EN↔JA speech translation pipeline over WebSocket — with domain-adapted glossary normalization and a rolling caption-revision engine. Built for manufacturing meetings. Fast enough to feel instant.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
+            <!-- Slide 3: Defect Inspection -->
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/fashion.jpeg" class="testimonial-img" alt="">
-                <h3>Fashion Neural Network</h3>
-                <h4>Deep Learning</h4>
+                <img src="assets/img/testimonials/defect_inspection_pipeline.svg" class="testimonial-img" alt="Surface Defect Inspection">
+                <h3>Surface Defect Inspection Platform</h3>
+                <h4>Computer Vision · MLOps</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  What if you could use advanced machine learning techniques to accurately classify fashion images? That's exactly what I've done - developing a neural network from scratch using cutting-edge algorithms like backpropagation and stochastic gradient descent. By optimizing hyperparameters and performing PCA, I achieved an impressive 88.045% test accuracy. Want to learn more? Visit my projects section for more details.
+                  Zero-defect manufacturing isn't a dream — it's an engineering problem. I benchmarked 5 models including WinCLIP VLM, hit 0.9853 AUROC through ensembling, and cut inference latency by 59% via ONNX INT8 quantization. Running at 400K+ requests/day on AWS with KS-statistic drift monitoring.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
+
+            <!-- Slide 4: LLMOps -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/llmops_platform.svg" class="testimonial-img" alt="LLMOps Intent Platform">
+                <h3>LLMOps Intent Classification Platform</h3>
+                <h4>LLMOps · Fine-Tuning</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fine-tuning isn't magic — it's infrastructure. I built an end-to-end LLMOps pipeline with QLoRA fine-tuning on a 77-intent dataset, lifting accuracy from 44.8% to 76.6% and schema compliance to 100%. Orchestrated with Airflow, tracked in MLflow, deployed on Kubernetes.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            
 
           </div>
           <div class="swiper-pagination"></div>
