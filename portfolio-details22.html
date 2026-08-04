@@ -20,36 +20,57 @@
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
         <div class="row gy-4">
+
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/speech_translation_preview.gif" alt="">
+                  <img src="assets/img/portfolio/demo_real_004_result.png" alt="Multimodal Product Intelligence">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
+
           <div class="col-lg-4">
-  <div class="portfolio-info">
-    <h3 style="text-align:center">Real-Time Speech Translation</h3>
-    <p style="text-align:center;font-size:13px;margin-bottom:14px;"><span style="color:#009688;font-weight:600;">Production ML</span> &nbsp;·&nbsp; <span style="color:#009688;font-weight:600;">Real-Time Inference</span> &nbsp;·&nbsp; <span style="color:#009688;font-weight:600;">NLP</span></p>
-    <li>Bidirectional live speech translation pipeline deployed for manufacturing meetings, achieving 115–206ms end-to-end translation latency.</li>
-    <li>Built on Deepgram STT for streaming transcription, a FastAPI WebSocket server for low-latency delivery, and a React frontend with rolling caption revision.</li>
-    <li>Containerized with Docker and designed for zero-downtime production deployment; handles concurrent sessions with asynchronous processing.</li>
-    <p style="margin-top:16px;text-align:center;">
-      <a href="https://github.com/AnoushkaBaidya" target="_blank" style="color:#009688;font-weight:600;">
-        <i class="bi bi-github"></i> &nbsp;View on GitHub
-      </a>
-    </p>
-  </div>
-</div>
+            <div class="portfolio-info">
+              <h3 style="text-align:center">Multimodal Product Intelligence</h3>
+              <p style="text-align:center;font-size:13px;margin-bottom:14px;">
+                <span style="color:#009688;font-weight:600;">Computer Vision</span> &nbsp;·&nbsp;
+                <span style="color:#009688;font-weight:600;">NLP</span> &nbsp;·&nbsp;
+                <span style="color:#009688;font-weight:600;">Multimodal ML</span> &nbsp;·&nbsp;
+                <span style="color:#009688;font-weight:600;">Production ML</span>
+              </p>
+              <li>
+              Built a Spark-powered multimodal pipeline over 142K+ product records, combining catalog images and listing text for structured attribute extraction.
+            </li>
+            <li>
+              Fine-tuned Qwen2-VL with 4-bit QLoRA on 20K examples, improving exact match from 21.7% to 70.4% and macro F1 from 55.0% to 85.3%.
+            </li>
+            <li>
+              Scaled training across 2 GPUs using Hugging Face Accelerate, achieving 84.6% multi-GPU scaling efficiency.
+            </li>
+            <li>
+              Productionized inference with FastAPI, Docker, DVC, and MLflow, reaching 99.84% strict JSON output validity.
+            </li>
+
+
+              <p style="margin-top:16px;text-align:center;">
+                <a href="https://github.com/AnoushkaBaidya/multimodal-product-intelligence" target="_blank" style="color:#009688;font-weight:600;">
+                  <i class="bi bi-github"></i> &nbsp;View on GitHub
+                </a>
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
+
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
